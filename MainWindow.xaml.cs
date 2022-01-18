@@ -56,5 +56,41 @@ namespace WPFApp4_Converter
             double rezsumyuan = rateyuan * sumyuan;
             rezsumYuan.Text = rezsumyuan.ToString();
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            const double a = 3.28084;
+            double distance = Convert.ToDouble(distance1.Text);
+            rate1.Text = a.ToString();
+            double rezsum1 = distance * a;
+            rezMeter1.Text = rezsum1.ToString();
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            const double a = 1/3.28084;
+            double distance = Convert.ToDouble(distance2.Text);
+            rate2.Text = a.ToString();
+            double rezult = distance * a;
+            rezMeter2.Text = rezult.ToString();
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            const double a = 1.6093439999999999;
+            double distance = Convert.ToDouble(distance3.Text);
+            rate3.Text = a.ToString();
+            double rezult = distance * a;
+            rezMeter3.Text = rezult.ToString();
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            const double a = 1/ 1.6093439999999999;
+            double distance = Convert.ToDouble(distance4.Text);
+            rate4.Text = a.ToString();
+            double rezult = distance * a;
+            rezMeter4.Text = rezult.ToString();
+        }
     }
 }

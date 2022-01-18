@@ -8,7 +8,7 @@
         Title="Convertor" Height="500" Width="800" MinHeight="380" MinWidth="600">
     <Grid>
         <TabControl >
-            <TabItem Header="Валюты">
+            <TabItem Header="Валюты" Height="23" Margin="-2,-2,-1.6,-0.2" VerticalAlignment="Top">
                 <UniformGrid Rows="2" Columns="2">
                     <GroupBox Header="Доллары в рубли" Margin="10" Padding="5" BorderBrush="Aquamarine" Foreground="Aquamarine" FontWeight="Bold" BorderThickness="3">
                     <Grid>
@@ -29,7 +29,7 @@
                             <TextBox x:Name="rate" Grid.Row="0" Grid.Column="1" Margin="10"/>
                             <TextBox x:Name="sum" Grid.Row="1" Grid.Column="1" Margin="10"/>
                             <TextBox x:Name="rezsum" Grid.Row="3" Grid.Column="1" Margin="10"/>
-                            <Button Content="Расчитать" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="10,3" IsDefault="True" Click="Button_Click"/>
+                            <Button Content="Расчитать" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="10,3" IsDefault="True" ToolTip="Enter" Click="Button_Click"/>
                         </Grid>
                         </GroupBox>
                     <GroupBox Header="Евро в рубли" Margin="10" Padding="5" BorderBrush="Blue" Foreground="Blue" FontWeight="Bold" BorderThickness="3">
@@ -101,8 +101,100 @@
                     </GroupBox>
                 </UniformGrid>
             </TabItem>
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="Расстояния">
+                <UniformGrid Rows="2" Columns="2">
+                    <GroupBox Header="Метры в Футы" Margin="10" Padding="5" BorderBrush="Green" Foreground="Green" FontWeight="Bold" BorderThickness="3">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Расстояние в Метрах"/>
+                            <Label Content="Коэффициент перевода" Grid.Row="1" Grid.Column="0"/>
+                            <Label Content="Результат в Футах" Grid.Row="3" Grid.Column="0"/>
+                            <TextBox x:Name="distance1" Grid.Row="0" Grid.Column="1" Margin="10"/>
+                            <TextBlock x:Name="rate1" Grid.Row="1" Grid.Column="1" Margin="10"/>
+                            <TextBox x:Name="rezMeter1" Grid.Row="3" Grid.Column="1" Margin="10"/>
+                            <Button Content="Расчитать" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="10,3" IsDefault="True" Click="Button_Click_4" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Футы в Метры" Margin="10" Padding="5" BorderBrush="Green" Foreground="Green" FontWeight="Bold" BorderThickness="3">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Расстояние в Футах"/>
+                            <Label Content="Коэффициент перевода" Grid.Row="1" Grid.Column="0"/>
+                            <Label Content="Результат в Метрах" Grid.Row="3" Grid.Column="0"/>
+                            <TextBox x:Name="distance2" Grid.Row="0" Grid.Column="1" Margin="10"/>
+                            <TextBlock x:Name="rate2" Grid.Row="1" Grid.Column="1" Margin="10"/>
+                            <TextBox x:Name="rezMeter2" Grid.Row="3" Grid.Column="1" Margin="10"/>
+                            <Button Content="Расчитать" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="10,3" Click="Button_Click_5"  />
+                        </Grid>
+                    </GroupBox>
+                    
+                    <GroupBox Header="Мили в Километры" Margin="10" Padding="5" BorderBrush="DarkViolet" Foreground="DarkViolet" FontWeight="Bold" BorderThickness="3">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Расстояние в Милях"/>
+                            <Label Content="Коэффициент перевода" Grid.Row="1" Grid.Column="0"/>
+                            <Label Content="Результат в Километрах" Grid.Row="3" Grid.Column="0"/>
+                            <TextBox x:Name="distance3" Grid.Row="0" Grid.Column="1" Margin="10"/>
+                            <TextBlock x:Name="rate3" Grid.Row="1" Grid.Column="1" Margin="10"/>
+                            <TextBox x:Name="rezMeter3" Grid.Row="3" Grid.Column="1" Margin="10"/>
+                            <Button Content="Расчитать" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="10,3" Click="Button_Click_6" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Километры в Мили" Margin="10" Padding="5" BorderBrush="DarkViolet" Foreground="DarkViolet" FontWeight="Bold" BorderThickness="3">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Расстояние в Километрах"/>
+                            <Label Content="Коэффициент перевода" Grid.Row="1" Grid.Column="0"/>
+                            <Label Content="Результат в Милях" Grid.Row="3" Grid.Column="0"/>
+                            <TextBox x:Name="distance4" Grid.Row="0" Grid.Column="1" Margin="10"/>
+                            <TextBlock x:Name="rate4" Grid.Row="1" Grid.Column="1" Margin="10"/>
+                            <TextBox x:Name="rezMeter4" Grid.Row="3" Grid.Column="1" Margin="10"/>
+                            <Button Content="Расчитать" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="10,3" Click="Button_Click_7" />
+                        </Grid>
+                    </GroupBox>
+                    
+                </UniformGrid>
+
             </TabItem>
         </TabControl>
 
